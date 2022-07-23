@@ -1,0 +1,16 @@
+.footer {
+  background-color: $color_black;
+  font-size: 1rem;
+  img {
+    width: 2rem;
+    margin-inline: 1rem;
+    margin-bottom: 1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    font-weight: 200;
+    font-size: small;
+  }
+}

@@ -1,9 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">digiArt</a>
+<nav class="navbar navbar-expand-md navbar-light">
+  <!-- + -->
+  <div class="addArt">
+    <div>
+      <a class="" href="/artwork/new" aria-label="Add artwork"
+        ><img
+          class="addArtImg"
+          src="/images/addArt2.svg"
+          alt="Icon for adding new artwork"
+      /></a>
+    </div>
+  </div>
 
+  <div class="wrapper_nav container-fluid">
+    <!-- logo -->
+    <a class="navbar-brand" href="/"
+      ><img class="logo" src="/images/digiart_logo1.svg" alt="logo digiArt"
+    /></a>
+
+    <!-- mobile menu -->
     <button
-      class="navbar-toggler"
+      class="navbar-toggler up"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNavAltMarkup"
@@ -11,17 +27,31 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <img class="menuIcon" src="/images/menu_icon.svg" alt="Menu icon" />
     </button>
 
+    <!-- links -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/artwork/new"
-          >Add artwork</a
-        >
-        <a class="nav-link" href="/">Home</a>
+      <div class="d-md-none navbar-nav">
+        <a class="nav-link" href="/"
+          ><img class="homeIcon" src="/images/home_icon.svg" alt="Home icon"
+        /></a>
         <a class="nav-link" href="/artist/join">Join</a>
-        <p>or</p>
+        <p class="or">or</p>
+        <a class="nav-link" href="/artist/login">Login</a>
+      </div>
+    </div>
+
+    <div
+      class="d-none d-md-block d-flex justify-content-end"
+      id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav gap-2">
+        <a class="nav-link" href="/"
+          ><img class="homeIcon" src="/images/home_icon.svg" alt="Home icon"
+        /></a>
+        <a class="nav-link" href="/artist/join">Join</a>
+        <p class="or">or</p>
         <a class="nav-link" href="/artist/login">Login</a>
       </div>
     </div>

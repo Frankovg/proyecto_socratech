@@ -10,45 +10,149 @@
   </head>
   <body>
     <%- include("navbar") %>
-    <br />
-    <% (finalResult.artwork).find(art => { %>
-    <div class="">
-      <img class="portada" src="/images/artwork/<%= art.image %>" alt="" />
-    </div>
-    <% }) %>
 
-    <img
-      src="/images/artist/<%= finalResult.picture %>"
-      alt="Profile picture of an artist"
-      width="100px"
-    />
-    <p><%= finalResult.artistic_name %></p>
-    <p><%= finalResult.name %></p>
-    <p><%= finalResult.email %></p>
-    <br />
-    <a href="/artist/edit/<%= finalResult.artist_id %>"
-      ><button>Edit profile</button></a
-    >
-    <br />
+    <header class="wrapperArtistHeader">
+      <div>
+        <% if((finalResult.artwork).length > 0) { %>
 
-    <br />
-    <% (finalResult.artwork).forEach(art => { %>
-    <br />
-    <% if(art.image != null) { %>
-    <img
-      src="/images/artwork/<%= art.image %>"
-      alt="Muestra de arte"
-      width="200px"
-    />
-    <br />
-    <%= art.title %>
-    <br />
-    <%= art.description %>
-    <br />
-    <a href="/artwork/edit/<%= art.artwork_id %>"><button>Edit</button></a>
-    <a href="/artwork/delete/<%= art.artist_id %>/<%= art.artwork_id %>"
-      ><button>Delete</button></a
-    >
-    <% }}) %>
+        <img
+          class="portada"
+          src="/images/artwork/<%= finalResult.artwork[0].image %>"
+          alt="Background image"
+        />
+        <% } %>
+      </div>
+
+      <div class="card container-fluid">
+        <div class="row g-0">
+          <div class="d-none d-sm-block col-sm-4">
+            <img
+              src="/images/artist/<%= finalResult.picture %>"
+              class="img-fluid rounded-start"
+              alt="Profile picture of an artist"
+            />
+          </div>
+
+          <div class="d-none d-sm-block col-sm-8 d-flex flex-colum">
+            <div class="card-body">
+              <h5 class="card-title"><%= finalResult.artistic_name %></h5>
+
+              <p class="card-text mb-1"><%= finalResult.name %></p>
+              <p class="card-text mb-1"><%= finalResult.email %></p>
+              <p class="card-text mb-1"><%= finalResult.phone_number %></p>
+              <a href="/artist/edit/<%= finalResult.artist_id %>">Edit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOLO MOBILE -->
+      <div class="mobilePic d-none">
+        <div class="caja d-flex mt-4 gap-2">
+          <img
+            src="/images/artist/<%= finalResult.picture %>"
+            alt="Profile picture of an artist"
+          />
+          <div class="d-flex flex-column p-2">
+            <h5 class="card-title"><%= finalResult.artistic_name %></h5>
+
+            <p class="card-text mb-1"><%= finalResult.name %></p>
+            <p class="card-text mb-1"><%= finalResult.email %></p>
+            <p class="card-text mb-1"><%= finalResult.phone_number %></p>
+            <a href="/artist/edit/<%= finalResult.artist_id %>">Edit</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <div class="main container-fluid pt-3">
+        <div class="row artes">
+          <% (finalResult.artwork).forEach(art => { %>
+          <div class="formato col-12 d-flex mb-5">
+            <% if(art.image != null) { %>
+            <img
+              class="muestra"
+              src="/images/artwork/<%= art.image %>"
+              alt="Muestra de arte"
+            />
+            <div class="info">
+              <h2><%= art.title %></h2>
+              <p><%= art.description %></p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                nobis commodi deleniti ipsam nemo necessitatibus facere eos cum
+                mollitia nam reprehenderit qui, quaerat perferendis eligendi
+                tempore adipisci numquam odio quasi!
+              </p>
+              <div class="d-flex justify-content-left gap-3">
+                <a href="/artwork/edit/<%= art.artwork_id %>"
+                  ><button class="pure-button fuller-button green">
+                    Edit
+                  </button></a
+                >
+                <a
+                  href="/artwork/delete/<%= art.artist_id %>/<%= art.artwork_id %>"
+                  ><button class="pure-button fuller-button red">
+                    Delete
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <% }}) %>
+        </div>
+      </div>
+    </main>
+
+    <%- include("footer") %>
   </body>
 </html>
+
+<!-- <% (finalResult.artwork).forEach(art => { %>
+  <br />
+  <% if(art.image != null) { %>
+  <img
+    src="/images/artwork/<%= art.image %>"
+    alt="Muestra de arte"
+    width="200px"
+  />
+  <br />
+  <%= art.title %>
+  <br />
+  <%= art.description %>
+  <br />
+  <a href="/artwork/edit/<%= art.artwork_id %>"><button>Edit</button></a>
+  <a href="/artwork/delete/<%= art.artist_id %>/<%= art.artwork_id %>"
+    ><button>Delete</button></a
+  >
+  <% }}) %> -->
+
+<!-- <main class="wrapperArtistMain">
+    <div class="artes d-flex justify-content-around gap-2 mb-4">
+      <% (finalResult.artwork).forEach(art => { %>
+      <br />
+      <% if(art.image != null) { %>
+      <a href="/artist/<%= art.artist_id %>/<%= art.artwork_id %>">
+        <img src="/images/artwork/<%= art.image %>" alt="Muestra de arte" />
+      </a>
+      <% }}) %>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-7">
+          <img
+            class="muestra"
+            src="/images/artwork/<%= finalResult.artwork[0].image %>"
+            alt="Arte numero 1"
+          />
+        </div>
+
+        <div class="col-5">
+          <h2><%= finalResult.artwork[0].title %></h2>
+          <p><%= finalResult.artwork[0].description %></p>
+        </div>
+      </div>
+    </div>
+  </main> -->

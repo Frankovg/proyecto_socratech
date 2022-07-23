@@ -4,24 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= result[0].artistic_name %></title>
+    <title><%= resultUser[0].artistic_name %></title>
     <%- include('bootstrap') %>
   </head>
   <body>
     <%- include("navbarUser") %>
-    <br />
-    <h1><%= result[0].artistic_name %></h1>
-    <div>
-      <% result.forEach(artist => { %>
-      <div>
-        <img width="100px" src="/images/artist/<%= artist.picture %>" alt="" />
-        <p>Name: <%= artist.name %></p>
-        <button>
-          <a href="/artist/<%= artist.artist_id %>">More</a>
-        </button>
-      </div>
 
-      <% }) %>
+    <div class="wrapperTitle">
+      <h2 class="homeTitle pt-4"><%= resultUser[0].artistic_name %></h2>
     </div>
+    <div class="wrapper">
+      <p class="artistTitle mb-1">Artist</p>
+      <main class="main container-fluid">
+        <div class="row row-col-4">
+          <% resultIndex.forEach(artist => { %>
+          <div class="col d-flex justify-content-center my-4">
+            <a href="/artist/<%= artist.artist_id %>">
+              <div class="card h-100">
+                <img
+                  src="/images/artist/<%= artist.picture %>"
+                  class="card-img-top"
+                  alt="Profile picture of an artist"
+                />
+
+                <div class="card-body">
+                  <h4 class="card-title name"><%= artist.artistic_name %></h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                    <%= artist.name %> <%= artist.surname %>
+                  </h5>
+
+                  <p class="card-text m-0 text-light">
+                    <%= artist.style %> Some quick example text to build on the
+                    card title and make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <% }) %>
+        </div>
+      </main>
+    </div>
+
+    <%- include("footer") %>
   </body>
 </html>
+
+<!-- <h1><%= resultUser[0].artistic_name %></h1>
+  <div>
+    <% resultIndex.forEach(artist => { %>
+    <div>
+      <img width="100px" src="/images/artist/<%= artist.picture %>" alt="" />
+      <p>Name: <%= artist.name %></p>
+      <button>
+        <a href="/artist/<%= artist.artist_id %>">More</a>
+      </button>
+    </div>
+
+    <% }) %>
+  </div> -->

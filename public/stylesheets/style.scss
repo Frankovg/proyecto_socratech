@@ -1,0 +1,58 @@
+//VARIABLES
+$font_family: "Nunito", sans-serif;
+$color_black: rgb(7, 8, 12);
+$color_darkgrey: rgb(21, 25, 30);
+$color_greendigi: rgb(28, 166, 67);
+$color_orangedigi: rgb(226, 140, 17);
+$color-lightgrey: rgb(134, 134, 134);
+
+//MIXIN
+
+//MIXIN RESPONSIVE
+@mixin mobile {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+@mixin navbar {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (min-width: 576px) and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin large_screen {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+//LINKS
+@import "navbar";
+@import "footer";
+@import "main";
+@import "wrapper";
+@import "mainArtist";
+@import "buttons";
+@import "login";
+@import "wrong";
+
+//GENERAL
+body {
+  font-family: $font_family !important;
+  color: white !important;
+  min-block-size: 100vh !important;
+  margin: 0px !important;
+  background-color: $color_darkgrey !important;
+  form {
+    padding-top: 2rem;
+  }
+}

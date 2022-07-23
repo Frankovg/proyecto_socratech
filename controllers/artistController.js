@@ -64,11 +64,12 @@ class ArtistController {
 
     connection.query(sql, (error, result) => {
       if (error) throw error;
-
+      console.log(result);
       if (result.length == 1) {
         let encryptedPass = result[0].password;
         bcrypt.compare(password, encryptedPass, (err, resComparePass) => {
           if (resComparePass) {
+            console.log(result[0].artist_id);
             res.redirect("/" + result[0].artist_id);
           } else {
             res.render("login", { message: "Wrong password" });
@@ -116,7 +117,7 @@ class ArtistController {
         artwork: groupOfArtwork,
       };
 
-      console.log(finalResult, "Resultado final");
+      // console.log(finalResult.artwork[0].title);
 
       res.render("artist", { finalResult });
     });

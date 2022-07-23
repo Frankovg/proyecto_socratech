@@ -9,60 +9,77 @@
   </head>
   <body>
     <%- include("navbar") %>
-    <br />
-    <!-- EDICIÓN DE ARTE -->
-    <div class="container-fluid">
-      <form
-        class="row g-3"
-        action="/artwork/edit/<%= result[0].artwork_id %>"
-        method="post"
-      >
-        <div class="col-6">
-          <label for="inputTitle" class="form-label">New title</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputTitle"
-            value="<%= result[0].title %>"
-            name="title"
-          />
-        </div>
-
-        <div class="col-6">
-          <label for="inputArtist" class="form-label">Change artist</label>
-          <select
-            class="form-select"
-            aria-label="Default select example"
-            id="inputArtist"
-            name="artist_id"
-          >
-            <option selected disabled><%= result[0].artistic_name %></option>
-            <% result.forEach(artist => { %>
-            <option value="<%= artist.artist_id %>">
-              <%= artist.artistic_name %>
-            </option>
-            <% }) %>
-          </select>
-        </div>
-
-        <div class="col-12">
-          <label for="inputInfo" class="form-label">Edit the description</label>
-          <br />
-          <textarea id="inputInfo" cols="50" rows="5" name="description">
-<%= result[0].description %>
-          </textarea>
-        </div>
-
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Update</button>
-        </div>
-
-        <div class="col-12">
-          <a href="/artist/<%= result[0].artist_id %>"
-            ><button type="button" class="btn btn-primary">Cancel</button>
-          </a>
-        </div>
-      </form>
+    <div class="wrapperTitleForm">
+      <h2 class="homeTitle pt-4">Edit art</h2>
     </div>
+
+    <div class="wrapperForm">
+      <div class="space">
+        <!-- EDICIÓN DE ARTE -->
+        <div class="container-fluid">
+          <form
+            class="row g-3"
+            action="/artwork/edit/<%= result[0].artwork_id %>"
+            method="post"
+          >
+            <div class="col-md-6">
+              <label for="inputTitle" class="form-label">New title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputTitle"
+                value="<%= result[0].title %>"
+                name="title"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputArtist" class="form-label">Change artist</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                id="inputArtist"
+                name="artist_id"
+              >
+                <option selected disabled>
+                  <%= result[0].artistic_name %>
+                </option>
+                <% result.forEach(artist => { %>
+                <option value="<%= artist.artist_id %>">
+                  <%= artist.artistic_name %>
+                </option>
+                <% }) %>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="inputInfo" class="form-label"
+                >Edit the description</label
+              >
+              <br />
+              <textarea id="inputInfo" class="form-control" name="description">
+    <%= result[0].description %>
+              </textarea>
+            </div>
+
+            <div class="col-12 text-end">
+              <button type="submit" class="pure-button fuller-button green">
+                Update
+              </button>
+              <a href="/artist/<%= result[0].artist_id %>"
+                ><button
+                  type="button"
+                  class="pure-button fuller-button orange ms-2"
+                >
+                  Cancel
+                </button>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <%- include("footer") %>
   </body>
 </html>

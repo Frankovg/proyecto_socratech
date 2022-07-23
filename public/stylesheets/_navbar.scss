@@ -1,0 +1,59 @@
+.navbar {
+  background-color: $color_black;
+  height: 34px !important;
+  font-size: 1rem;
+  @include navbar {
+    height: 52px !important;
+  }
+  a {
+    color: white !important;
+    z-index: 3;
+  }
+  .logo {
+    width: 81px;
+  }
+  .menuIcon {
+    width: 29px;
+  }
+  .addArt {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 2 !important;
+    .addArtImg {
+      width: 67px;
+      height: 67px;
+      margin-top: 3rem;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    .addArtImg:hover {
+      transform: rotate(360deg);
+      transition: all 0.3s ease-in-out 0s;
+    }
+  }
+  .homeIcon {
+    width: 26px;
+  }
+  .or {
+    margin: 0px !important;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-link {
+    padding: 5px !important;
+  }
+  .up {
+    z-index: 3 !important;
+    padding: 3px;
+    border: 1px solid white !important;
+    border-radius: 50% !important;
+  }
+  .welcome {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1px;
+  }
+}

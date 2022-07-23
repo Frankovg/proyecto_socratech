@@ -4,50 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>digiArt - Login</title>
+    <title>digiArt Login</title>
     <%- include('bootstrap') %>
   </head>
   <body>
     <%- include("navbar") %>
-    <br />
-    <!-- LOGIN DE ARTISTA -->
-    <div class="container-fluid">
-      <form class="row g-3" action="/artist/login" method="post">
-        <div class="col-md-6">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="inputEmail"
-            name="email"
-            placeholder="artson@artson.com"
-            autocomplete="on"
-          />
-        </div>
 
-        <div class="col-md-6">
-          <label for="inputPassword" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="inputPassword"
-            name="password"
-            placeholder="••••••"
-          />
-        </div>
-
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Login</button>
-        </div>
-
-        <div class="col-12">
-          <a href="/"
-            ><button type="button" class="btn btn-primary">Cancel</button></a
-          >
-        </div>
-      </form>
-
-      <p><%= message %></p>
+    <div class="wrapperTitleForm">
+      <h2 class="homeTitle pt-4">Login</h2>
     </div>
+    <div class="wrapperForm">
+      <div class="space">
+        <!-- LOGIN DE ARTISTA -->
+        <div class="container-fluid">
+          <form class="row g-3" action="/artist/login" method="post">
+            <div class="col-">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail"
+                name="email"
+                placeholder="artson@artson.com"
+                autocomplete="on"
+              />
+            </div>
+
+            <div class="col-">
+              <label for="inputPassword" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword"
+                name="password"
+                placeholder="••••••"
+              />
+            </div>
+
+            <div class="col- text-end">
+              <button type="submit" class="pure-button fuller-button green">
+                Login
+              </button>
+              <a href="/"
+                ><button
+                  type="button"
+                  class="pure-button fuller-button orange ms-2"
+                >
+                  Cancel
+                </button></a
+              >
+            </div>
+          </form>
+
+          <p><%= message %></p>
+        </div>
+      </div>
+    </div>
+    <%- include("footer") %>
   </body>
 </html>

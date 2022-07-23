@@ -1,0 +1,75 @@
+.wrapper {
+  // border: 1px solid red;
+  max-inline-size: 1300px !important; /*espacio máximo de trabajo*/
+  padding-inline: 3rem; /*debe mantener esa distancia siempre*/
+  padding-top: 4rem;
+  padding-bottom: 3.2rem;
+  margin: auto;
+
+  @include mobile {
+    padding-inline: 1rem;
+  }
+}
+
+.wrapper_nav {
+  max-inline-size: 1300px !important;
+}
+
+.wrapperTitle {
+  max-inline-size: 1300px !important;
+  padding-inline: 3rem;
+  margin: auto;
+  @include mobile {
+    padding-inline: 1rem;
+  }
+}
+
+.wrapperTitleForm {
+  max-inline-size: 640px !important;
+  padding-inline: 3rem;
+  margin: auto;
+  @include mobile {
+    padding-inline: 1rem;
+  }
+}
+
+.wrapperArtistHeader {
+  // border: 1px solid red;
+  max-inline-size: 1300px !important;
+
+  margin: auto;
+}
+
+.wrapperArtistMain {
+  max-inline-size: 1300px !important;
+  padding-inline: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 3.2rem;
+  margin: auto;
+  @include mobile {
+    padding-inline: 1rem;
+  }
+}
+
+.wrapperForm {
+  max-inline-size: 540px !important;
+  padding-inline: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 3.2rem;
+  margin: auto;
+  @include mobile {
+    padding-inline: 1rem;
+  }
+}
+// .wrapper {
+//     // border: 3px solid red;
+//     max-inline-size: 1366px;
+//     margin: auto;
+//     @include desktop {
+//       padding-inline-start: 16px;
+//       padding-inline-end: 16px;
+//     }
+//     @include large_screen {
+//       display: flex;
+//     }
+//   }

@@ -1,0 +1,13 @@
+.window {
+  border: 1px solid white;
+  border: 0.5px solid $color-lightgrey;
+  background-color: $color_black;
+  width: clamp(40vw, 50vw, 60vw);
+  margin: auto;
+  @include navbar {
+    width: 70vw;
+  }
+  @include mobile {
+    width: 90vw;
+  }
+}

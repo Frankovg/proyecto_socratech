@@ -15,12 +15,16 @@ class IndexController {
   showHomeUser = (req, res) => {
     let artist_id = req.params.artist_id;
 
-    let sql = "SELECT * FROM artist";
-    // let sql = `SELECT artistic_name FROM artist WHERE artist_id = "${artist_id}"`;
+    let sqlUser = `SELECT * FROM artist WHERE artist_id = ${artist_id}`;
+    let sqlIndex = "SELECT * FROM artist";
 
-    connection.query(sql, (error, result) => {
-      if (error) throw error;
-      res.render("indexUser", { result });
+    connection.query(sqlUser, (error1, resultUser) => {
+      if (error1) throw error1;
+
+      connection.query(sqlIndex, (error2, resultIndex) => {
+        if (error2) throw error2;
+        res.render("indexUser", { resultUser, resultIndex });
+      });
     });
   };
 }
