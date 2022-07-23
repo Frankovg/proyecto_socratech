@@ -1,0 +1,2 @@
+#Ignora la carpera node_modules de node.js
+/node_modules

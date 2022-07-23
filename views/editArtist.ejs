@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Artist</title>
+    <%- include('bootstrap') %>
+  </head>
+  <body>
+    <%- include("navbar") %>
+    <br />
+    <!-- EDICIÓN DE ARTISTA -->
+    <div class="container-fluid">
+      <form
+        class="row g-3"
+        action="/artist/edit/<%= result[0].artist_id %>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="col-6">
+          <label for="inputName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputName"
+            value="<%= result[0].name %>"
+            name="name"
+          />
+        </div>
+
+        <div class="col-6">
+          <label for="inputSurname" class="form-label">Surname</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputSurname"
+            value="<%= result[0].surname %>"
+            name="surname"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputNickname" class="form-label">Artistic name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputNickname"
+            value="<%= result[0].artistic_name %>"
+            name="artistic_name"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputMobile" class="form-label">Mobile number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputMobile"
+            value="<%= result[0].phone_number %>"
+            name="phone_number"
+          />
+        </div>
+
+        <div class="col-12">
+          <label for="inputStyle" class="form-label">Describe your style</label>
+          <br />
+          <textarea id="inputStyle" cols="50" rows="5" name="style">
+<%= result[0].style %></textarea
+          >
+        </div>
+
+        <div class="col- mb-3">
+          <label for="formFile" class="form-label">Upload a new Avatar</label>
+          <input class="form-control" type="file" id="formFile" name="img" />
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            value="<%= result[0].email %>"
+            name="email"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            name="password"
+            placeholder="••••••"
+            disabled
+          />
+        </div>
+
+        <div class="col-2">
+          <a href="/artist/change_password/<%= result[0].artist_id %>"
+            ><button type="button" class="btn btn-primary">
+              Change password
+            </button></a
+          >
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Accept</button>
+        </div>
+
+        <div class="col-12">
+          <a href="/artist/<%= result[0].artist_id %>"
+            ><button type="button" class="btn btn-primary">Cancel</button></a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

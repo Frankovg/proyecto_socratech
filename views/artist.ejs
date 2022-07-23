@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>digi Artist</title>
+
+    <%- include('bootstrap') %>
+  </head>
+  <body>
+    <%- include("navbar") %>
+    <br />
+    <% (finalResult.artwork).find(art => { %>
+    <div class="">
+      <img class="portada" src="/images/artwork/<%= art.image %>" alt="" />
+    </div>
+    <% }) %>
+
+    <img
+      src="/images/artist/<%= finalResult.picture %>"
+      alt="Profile picture of an artist"
+      width="100px"
+    />
+    <p><%= finalResult.artistic_name %></p>
+    <p><%= finalResult.name %></p>
+    <p><%= finalResult.email %></p>
+    <br />
+    <a href="/artist/edit/<%= finalResult.artist_id %>"
+      ><button>Edit profile</button></a
+    >
+    <br />
+
+    <br />
+    <% (finalResult.artwork).forEach(art => { %>
+    <br />
+    <% if(art.image != null) { %>
+    <img
+      src="/images/artwork/<%= art.image %>"
+      alt="Muestra de arte"
+      width="200px"
+    />
+    <br />
+    <%= art.title %>
+    <br />
+    <%= art.description %>
+    <br />
+    <a href="/artwork/edit/<%= art.artwork_id %>"><button>Edit</button></a>
+    <a href="/artwork/delete/<%= art.artist_id %>/<%= art.artwork_id %>"
+      ><button>Delete</button></a
+    >
+    <% }}) %>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Artist</title>
+    <%- include('bootstrap') %>
+  </head>
+  <body>
+    <%- include("navbar") %>
+    <br />
+    <!-- REGISTRO DE ARTISTA -->
+    <div class="container-fluid">
+      <form
+        class="row g-3 needs-validation"
+        action="/artist/join"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="col-6">
+          <label for="inputName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputName"
+            placeholder="Sebastian"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="col-6">
+          <label for="inputSurname" class="form-label">Surname</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputSurname"
+            placeholder="Erickson"
+            name="surname"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputNickname" class="form-label">Artistic name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputNickname"
+            name="artistic_name"
+            placeholder="Artson"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputMobile" class="form-label">Mobile number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputMobile"
+            name="phone_number"
+            placeholder="(+34)678362789"
+          />
+        </div>
+
+        <div class="col-12">
+          <label for="inputStyle" class="form-label">Describe your style</label>
+          <br />
+          <textarea
+            id="inputStyle"
+            cols="50"
+            rows="5"
+            name="style"
+            placeholder="I love robots ❤"
+            required
+          ></textarea>
+        </div>
+
+        <div class="col- mb-3">
+          <label for="formFile" class="form-label">Avatar</label>
+          <input class="form-control" type="file" id="formFile" name="img" />
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail" class="form-label"
+            >Email <span><p><%= message %></p></span></label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            name="email"
+            placeholder="artson@artson.com"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            name="password"
+            placeholder="••••••"
+            required
+          />
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Join</button>
+        </div>
+
+        <div class="col-12">
+          <a href="/"
+            ><button type="button" class="btn btn-primary">Cancel</button></a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
