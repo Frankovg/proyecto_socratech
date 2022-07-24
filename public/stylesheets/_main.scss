@@ -1,11 +1,9 @@
 .main {
-  border: 0.5px solid $color-lightgrey;
-  background-color: $color_black;
-  width: 100% !important;
   height: 90vh;
-  overflow: auto;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  @include toScroll;
+  @include mobile {
+    height: 75vh;
+  }
   a {
     text-decoration: none;
   }

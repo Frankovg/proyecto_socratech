@@ -5,8 +5,23 @@ $color_darkgrey: rgb(21, 25, 30);
 $color_greendigi: rgb(28, 166, 67);
 $color_orangedigi: rgb(226, 140, 17);
 $color-lightgrey: rgb(134, 134, 134);
+$max_inline_size_1300: 1300px !important;
 
 //MIXIN
+@mixin toScroll {
+  border: 0.5px solid $color-lightgrey;
+  background-color: $color_black;
+  width: 100% !important;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@mixin wrapper_principal {
+  padding-inline: 3rem; /*debe mantener esa distancia siempre*/
+  padding-top: 4rem;
+  padding-bottom: 3.2rem;
+  margin: auto;
+}
 
 //MIXIN RESPONSIVE
 @mixin mobile {
@@ -42,7 +57,7 @@ $color-lightgrey: rgb(134, 134, 134);
 @import "wrapper";
 @import "mainArtist";
 @import "buttons";
-@import "login";
+@import "join";
 @import "wrong";
 
 //GENERAL

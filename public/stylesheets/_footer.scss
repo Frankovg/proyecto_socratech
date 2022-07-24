@@ -1,6 +1,14 @@
 .footer {
   background-color: $color_black;
   font-size: 1rem;
+  @include mobile {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    p {
+      display: none;
+    }
+  }
   img {
     width: 2rem;
     margin-inline: 1rem;

@@ -46,7 +46,7 @@ class ArtistController {
           });
         });
       } else {
-        res.render("addArtist", { message: "Email already exist!" });
+        res.render("addArtist", { message: "Account already exist." });
       }
     });
   };
@@ -72,7 +72,7 @@ class ArtistController {
             console.log(result[0].artist_id);
             res.redirect("/" + result[0].artist_id);
           } else {
-            res.render("login", { message: "Wrong password" });
+            res.render("login", { message: "¡Wrong password!" });
           }
         });
       } else {

@@ -1,0 +1,15 @@
+@include mobile {
+  .toMobile {
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+  .forMobile {
+    height: 75vh;
+    @include toScroll;
+  }
+}
+
+.forMobile::-webkit-scrollbar {
+  display: none;
+}

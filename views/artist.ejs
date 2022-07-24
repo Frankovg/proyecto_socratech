@@ -13,12 +13,18 @@
 
     <header class="wrapperArtistHeader">
       <div>
-        <% if((finalResult.artwork).length > 0) { %>
+        <% if(finalResult.artwork[0].image != null) { %>
 
         <img
           class="portada"
           src="/images/artwork/<%= finalResult.artwork[0].image %>"
           alt="Background image"
+        />
+        <% } else { %>
+        <img
+          class="portada"
+          src="/images/artwork/portada_default.png"
+          alt="Portada default"
         />
         <% } %>
       </div>
@@ -100,6 +106,11 @@
               </div>
             </div>
           </div>
+          <% } else { %>
+          <div class="">
+            <h3>¡Time to upload something cool!</h3>
+          </div>
+
           <% }}) %>
         </div>
       </div>
