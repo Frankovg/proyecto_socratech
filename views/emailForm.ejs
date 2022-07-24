@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <script
+      type="text/javascript"
+      src="./javascripts/sendEmail.js"
+      charset="UTF-8"
+    ></script>
+
+    <%- include('bootstrap') %>
+  </head>
+  <body>
+    <%- include("navbar") %>
+
+    <div class="wrapperTitleForm">
+      <h2 class="homeTitle pt-4">Let's talk</h2>
+    </div>
+
+    <div class="wrapperForm">
+      <div class="space">
+        <!-- ENVIAR UN EMAIL A FRANCO -->
+        <div class="container-fluid">
+          <form
+            class="row g-3"
+            action="https://formspree.io/f/xgeddoab"
+            method="post"
+            id="form"
+          >
+            <div class="col-">
+              <label for="senderName" class="form-label">Full name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="senderName"
+                placeholder="King Arthur"
+                name="senderName"
+                required
+              />
+            </div>
+
+            <div class="col-">
+              <label for="senderEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="senderEmail"
+                placeholder="king_arthur@kingdom.com"
+                name="senderEmail"
+                required
+              />
+            </div>
+
+            <div class="col-12">
+              <label for="senderMessage" class="form-label">Message</label>
+              <br />
+              <textarea
+                id="senderMessage"
+                class="form-control"
+                name="senderMessage"
+                required
+              >
+              </textarea>
+            </div>
+
+            <div class="col-12 text-end">
+              <button type="submit" class="pure-button fuller-button green">
+                Submit
+              </button>
+              <a href="/"
+                ><button
+                  type="button"
+                  class="pure-button fuller-button orange ms-2"
+                >
+                  Cancel
+                </button>
+              </a>
+            </div>
+          </form>
+
+          <a href="mailto:frankovg@gmail.com" class="truco"></a>
+        </div>
+      </div>
+    </div>
+
+    <%- include("footer") %>
+  </body>
+</html>

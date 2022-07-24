@@ -15,6 +15,9 @@ router.get("/login", artistController.viewLogin);
 // localhost:3000/artist/login
 router.post("/login", artistController.artistLogin);
 
+// localhost:3000/artist/account/:artist_id
+router.get("/account/:artist_id", artistController.showArtistProfile);
+
 // localhost:3000/artist/:artist_id
 router.get("/:artist_id", artistController.showArtistProfile);
 
@@ -36,5 +39,8 @@ router.post("/change_password/:artist_id", artistController.changePassword);
 
 //localhost:3000/artist/wrong_password/:artist_id
 router.get("/wrong_password/:artist_id", artistController.showPasswordError);
+
+// localhost:3000/artist/delete/:artist_id
+router.get("/delete/:artist_id", artistController.deleteAccount);
 
 module.exports = router;

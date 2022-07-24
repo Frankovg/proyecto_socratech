@@ -118,8 +118,16 @@ class ArtistController {
       };
 
       // console.log(finalResult.artwork[0].title);
-
-      res.render("artist", { finalResult });
+      // console.log(req);
+      // console.log(req.originalUrl);
+      // console.log(req.originalUrl == `/artist/${finalResult.artist_id}`);
+      if (req.originalUrl == `/artist/${finalResult.artist_id}`) {
+        res.render("artist", { finalResult });
+      } else if (
+        req.originalUrl == `/artist/account/${finalResult.artist_id}`
+      ) {
+        res.render("artistAccount", { finalResult });
+      }
     });
   };
 
@@ -145,12 +153,12 @@ class ArtistController {
 
     if (req.file != undefined) {
       let img = req.file.filename;
-      sql = `UPDATE artist SET name = "${name}", surname = "${surname}", artistic_name = "${artistic_name}", email = "${email}", style = "${style}", phone_number = "${phone_number}" WHERE artist_id = ${artist_id}, picture = "${img}"`;
+      sql = `UPDATE artist SET name = "${name}", surname = "${surname}", artistic_name = "${artistic_name}", email = "${email}", style = "${style}", phone_number = "${phone_number}", picture = "${img}" WHERE artist_id = ${artist_id}`;
     }
 
     connection.query(sql, (error, result) => {
       if (error) throw error;
-      res.redirect(`/artist/${artist_id}`);
+      res.redirect(`/artist/account/${artist_id}`);
     });
   };
 
@@ -212,6 +220,18 @@ class ArtistController {
     connection.query(sql, (error, result) => {
       if (error) throw error;
       res.render("wrongPassword", { result });
+    });
+  };
+
+  //ELIMINAR CUENTA
+  deleteAccount = (req, res) => {
+    let artist_id = req.params.artist_id;
+
+    let sql = `DELETE FROM artist WHERE artist_id = ${artist_id}`;
+
+    connection.query(sql, (error, result) => {
+      if (error) throw error;
+      res.redirect("/");
     });
   };
 }

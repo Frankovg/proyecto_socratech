@@ -1,0 +1,42 @@
+<!-- MAIN -->
+<main class="wrapper">
+  <div class="main container-fluid pt-3">
+    <div class="row artes">
+      <% (finalResult.artwork).forEach(art => { %>
+      <div class="formato col-12 d-flex mb-5">
+        <% if(art.image != null) { %>
+        <img
+          class="muestra"
+          src="/images/artwork/<%= art.image %>"
+          alt="Muestra de arte"
+        />
+        <div class="info">
+          <h2><%= art.title %></h2>
+          <p><%= art.description %></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nobis
+            commodi deleniti ipsam nemo necessitatibus facere eos cum mollitia
+            nam reprehenderit qui, quaerat perferendis eligendi tempore adipisci
+            numquam odio quasi!
+          </p>
+          <div class="d-flex justify-content-left gap-3">
+            <a href="/artwork/edit/<%= art.artwork_id %>"
+              ><button class="pure-button fuller-button green">Edit</button></a
+            >
+            <a
+              href="/artwork/delete/<%= art.artist_id %>/<%= art.artwork_id %>"
+              onclick="return confirm('Are you sure you want to delete this item')"
+              ><button class="pure-button fuller-button red">Delete</button></a
+            >
+          </div>
+        </div>
+      </div>
+      <% } else { %>
+      <div class="">
+        <h3>¡Time to upload something cool!</h3>
+      </div>
+
+      <% }}) %>
+    </div>
+  </div>
+</main>

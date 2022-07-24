@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= finalResult.artistic_name %></title>
+
+    <%- include('bootstrap') %>
+  </head>
+  <body>
+    <%- include("navbarAccount") %>
+
+    <header class="wrapperArtistHeader">
+      <div>
+        <% if(finalResult.artwork[0].image != null) { %>
+
+        <img
+          class="portada"
+          src="/images/artwork/<%= finalResult.artwork[0].image %>"
+          alt="Background image"
+        />
+        <% } else { %>
+        <img
+          class="portada"
+          src="/images/artwork/portada_default.png"
+          alt="Portada default"
+        />
+        <% } %>
+      </div>
+
+      <div class="card container-fluid">
+        <div class="row g-0">
+          <div class="d-none d-sm-block col-sm-4">
+            <img
+              src="/images/artist/<%= finalResult.picture %>"
+              class="img-fluid rounded-start"
+              alt="Profile picture of an artist"
+            />
+          </div>
+
+          <div class="d-none d-sm-block col-sm-8 d-flex flex-colum">
+            <div class="card-body">
+              <h5 class="card-title"><%= finalResult.artistic_name %></h5>
+
+              <p class="card-text mb-1"><%= finalResult.name %></p>
+              <p class="card-text mb-1"><%= finalResult.email %></p>
+              <p class="card-text mb-1"><%= finalResult.phone_number %></p>
+              <div>
+                <a class="me-3" href="/artist/edit/<%= finalResult.artist_id %>"
+                  >Edit</a
+                >
+                <a
+                  onclick="return confirm('Are you sure you want to delete this item')"
+                  class="deleteAccount"
+                  href="/artist/delete/<%= finalResult.artist_id %>"
+                  >Delete Account</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOLO MOBILE -->
+      <div class="mobilePic d-none">
+        <div class="caja d-flex mt-4 gap-2">
+          <img
+            src="/images/artist/<%= finalResult.picture %>"
+            alt="Profile picture of an artist"
+          />
+          <div class="d-flex flex-column p-2">
+            <h5 class="card-title"><%= finalResult.artistic_name %></h5>
+
+            <p class="card-text mb-1"><%= finalResult.name %></p>
+            <p class="card-text mb-1"><%= finalResult.email %></p>
+            <p class="card-text mb-1"><%= finalResult.phone_number %></p>
+            <div>
+              <a class="me-3" href="/artist/edit/<%= finalResult.artist_id %>"
+                >Edit</a
+              >
+              <a
+                onclick="return confirm('Are you sure you want to delete this item')"
+                class="deleteAccount"
+                href="/artist/delete/<%= finalResult.artist_id %>"
+                >Delete Account</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <%- include("mainUsers") %>
+    <br />
+    <%- include("footer") %>
+  </body>
+</html>

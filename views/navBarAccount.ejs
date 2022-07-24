@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-md navbar-light">
+  <!-- + -->
+  <div class="addArt">
+    <div>
+      <a title="Add artwork here!" class="" href="/artwork/new"
+        ><img
+          class="addArtImg"
+          src="/images/addArt2.svg"
+          alt="Icon for adding new artwork"
+      /></a>
+    </div>
+  </div>
+
+  <div class="wrapper_nav container-fluid">
+    <!-- logo -->
+    <a class="navbar-brand" href="/"
+      ><img class="logo" src="/images/digiart_logo1.svg" alt="logo digiArt"
+    /></a>
+
+    <!-- mobile menu -->
+    <button
+      class="navbar-toggler up"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <img class="menuIcon" src="/images/menu_icon.svg" alt="Menu icon" />
+    </button>
+
+    <!-- links mobile-->
+    <div
+      class="collapse navbar-collapse text-end pe-5 pt-3"
+      id="navbarNavAltMarkup"
+    >
+      <div class="d-md-none navbar-nav">
+        <a class="nav-link" href="/artist/account/<%= finalResult.artist_id %>">
+          <p class="fs-4 m-0"><%= finalResult.artistic_name %></p>
+        </a>
+        <a class="nav-link fs-4" href="/">Log out</a>
+      </div>
+    </div>
+
+    <!-- links -->
+    <div
+      class="d-none d-md-block d-flex justify-content-end"
+      id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav gap-2">
+        <a title="Go Home" class="nav-link" href="/"
+          ><img class="homeIcon" src="/images/home_icon.svg" alt="Home icon"
+        /></a>
+        <a class="nav-link" href="/artist/account/<%= finalResult.artist_id %>">
+          <p class="welcome">
+            Welcome <span class="ms-2"><%= finalResult.artistic_name %></span>
+          </p>
+        </a>
+        <a class="nav-link" href="/">Log out</a>
+      </div>
+    </div>
+  </div>
+</nav>

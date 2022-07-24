@@ -3,7 +3,7 @@ const connection = require("../config/db");
 class IndexController {
   // Render home con todos los artistas
   showHome = (req, res) => {
-    let sql = "SELECT * FROM artist";
+    let sql = "SELECT * FROM artist ORDER BY artistic_name ASC";
 
     connection.query(sql, (error, result) => {
       if (error) throw error;
