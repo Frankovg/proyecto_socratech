@@ -166,7 +166,7 @@ class ArtistController {
   showNewPassForm = (req, res) => {
     let artist_id = req.params.artist_id;
 
-    let sql = `SELECT concat(artist.name, " ", artist.surname) AS fullname, artist.artist_id FROM artist WHERE artist_id = ${artist_id}`;
+    let sql = `SELECT concat(artist.name, " ", artist.surname) AS fullname, artist.artistic_name, artist.artist_id FROM artist WHERE artist_id = ${artist_id}`;
 
     connection.query(sql, (error, result) => {
       if (error) throw error;
@@ -197,7 +197,7 @@ class ArtistController {
 
                 connection.query(sql2, (error2, result2) => {
                   if (error2) throw error2;
-                  res.redirect(`/artist/${artist_id}`);
+                  res.redirect(`/artist/account/${artist_id}`);
                 });
               });
             } else {

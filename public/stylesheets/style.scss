@@ -34,18 +34,8 @@ $max_inline_size_1300: 1300px !important;
     @content;
   }
 }
-@mixin tablet {
-  @media only screen and (min-width: 576px) and (max-width: 1200px) {
-    @content;
-  }
-}
 @mixin desktop {
   @media only screen and (max-width: 992px) {
-    @content;
-  }
-}
-@mixin large_screen {
-  @media only screen and (min-width: 1200px) {
     @content;
   }
 }
@@ -62,6 +52,7 @@ $max_inline_size_1300: 1300px !important;
 @import "mailForm";
 
 //GENERAL
+
 body {
   font-family: $font_family !important;
   color: white !important;

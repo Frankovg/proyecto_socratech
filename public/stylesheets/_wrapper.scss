@@ -45,6 +45,7 @@
 
 .wrapperForm {
   max-inline-size: 540px !important;
+  height: 100%;
   @include wrapper_principal;
   @include mobile {
     padding-inline: 1rem;

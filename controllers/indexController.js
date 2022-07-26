@@ -16,7 +16,7 @@ class IndexController {
     let artist_id = req.params.artist_id;
 
     let sqlUser = `SELECT * FROM artist WHERE artist_id = ${artist_id}`;
-    let sqlIndex = "SELECT * FROM artist";
+    let sqlIndex = "SELECT * FROM artist ORDER BY artistic_name ASC";
 
     connection.query(sqlUser, (error1, resultUser) => {
       if (error1) throw error1;

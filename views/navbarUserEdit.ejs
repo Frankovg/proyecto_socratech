@@ -12,8 +12,8 @@
       id="navbarNavAltMarkup"
     >
       <div class="d-md-none navbar-nav">
-        <a class="nav-link" href="/artist/account/<%= finalResult.artist_id %>">
-          <p class="fs-4 m-0"><%= finalResult.artistic_name %></p>
+        <a class="nav-link" href="/artist/account/<%= result[0].artist_id %>">
+          <p class="fs-4 m-0"><%= result[0].artistic_name %></p>
         </a>
         <a class="nav-link fs-4" href="/">Log out</a>
       </div>
@@ -28,9 +28,9 @@
         <a title="Go Home" class="nav-link" href="/"
           ><img class="homeIcon" src="/images/home_icon.svg" alt="Home icon"
         /></a>
-        <a class="nav-link" href="/artist/account/<%= finalResult.artist_id %>">
+        <a class="nav-link" href="/artist/account/<%= result[0].artist_id %>">
           <p class="welcome">
-            Welcome <span class="ms-2"><%= finalResult.artistic_name %></span>
+            Welcome <span class="ms-2"><%= result[0].artistic_name %></span>
           </p>
         </a>
         <a class="nav-link" href="/">Log out</a>

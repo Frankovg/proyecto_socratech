@@ -41,7 +41,7 @@
                 id="inputArtist"
                 name="artist_id"
               >
-                <option selected disabled>
+                <option value="<%= result[0].artist_id %>" selected>
                   <%= result[0].artistic_name %>
                 </option>
                 <% result.forEach(artist => { %>
@@ -58,8 +58,8 @@
               >
               <br />
               <textarea id="inputInfo" class="form-control" name="description">
-    <%= result[0].description %>
-              </textarea>
+<%= result[0].description %></textarea
+              >
             </div>
 
             <div class="col-12 text-end">

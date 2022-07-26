@@ -1,34 +1,10 @@
 <nav class="navbar navbar-expand-md navbar-light">
-  <!-- + -->
-  <div class="addArt">
-    <div>
-      <a title="Add artwork here!" class="" href="/artwork/new"
-        ><img
-          class="addArtImg"
-          src="/images/addArt2.svg"
-          alt="Icon for adding new artwork"
-      /></a>
-    </div>
-  </div>
+  <%- include("addArtIcon") %>
 
   <div class="wrapper_nav container-fluid">
-    <!-- logo -->
-    <a class="navbar-brand" href="/"
-      ><img class="logo" src="/images/digiart_logo1.svg" alt="logo digiArt"
-    /></a>
-
-    <!-- mobile menu -->
-    <button
-      class="navbar-toggler up"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <img class="menuIcon" src="/images/menu_icon.svg" alt="Menu icon" />
-    </button>
+    <%- include("logoIcon") %>
+    <br />
+    <%- include("menuIcon") %>
 
     <!-- links mobile-->
     <div

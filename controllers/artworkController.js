@@ -34,10 +34,11 @@ class ArtworkController {
   showArtEditor = (req, res) => {
     let artwork_id = req.params.artwork_id;
 
-    let sql = `SELECT artwork.*, artist.artistic_name, artist.artist_id FROM artist LEFT JOIN artwork ON artist.artist_id = artwork.artist_id AND artwork.artwork_id = ${artwork_id} ORDER BY artwork_id DESC`;
+    let sql = `SELECT artwork.artwork_id, artwork.title, artwork.description, artwork.image, artist.artistic_name, artist.artist_id FROM artist LEFT JOIN artwork ON artist.artist_id = artwork.artist_id AND artwork.artwork_id = ${artwork_id} ORDER BY artwork_id DESC`;
 
     connection.query(sql, (error, result) => {
       if (error) throw error;
+      // console.log(result);
       res.render("editArtwork", { result });
     });
   };
