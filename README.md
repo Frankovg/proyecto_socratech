@@ -40,10 +40,15 @@
 ![Example screenshot](./public/screenshots/screenshot1.png)
 <br/>
 <br/>
+![Example screenshot](./public/screenshots/screenshot2.png)
 <br/>
-![Example screenshot](./public/screenshots/screenshot2.png)<br/>
-![Example screenshot](./public/screenshots/screenshot4.png)<br/>
-![Example screenshot](./public/screenshots/screenshot5.png)<br/>
+<br/>
+![Example screenshot](./public/screenshots/screenshot4.png)
+<br/>
+<br/>
+![Example screenshot](./public/screenshots/screenshot5.png)
+<br/>
+<br/>
 ![Example screenshot](./public/screenshots/screenshot3.png)
 
 
