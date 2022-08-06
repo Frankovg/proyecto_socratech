@@ -68,7 +68,7 @@ The relational diagram should be like:
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+The project is done for the purpose for which it was made. But it can be improved more. Maybe I will return to work on it in the future.
 
 
 ## Room for Improvement
