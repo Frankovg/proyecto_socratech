@@ -52,21 +52,16 @@
 
 
 ## Setup
-1- Create the database. You will find it at "./public/database/digiArt.sql".
+1- Create the database. You will find it at './public/database/digiArt.sql'.
 <br/>
-   The relational diagram should be like:
+The relational diagram should be like:
    <br/>
 ![Example screenshot](./public/database/relational_diagram.png)
 <br/>
-
-
-
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
-
-
-
+2- Run 'npm instal' in your terminal. It will install all the dependencies from the package.json.
+3- Lunch the server with nodemon writing 'npm start' in the terminal.
+4- Go to your browser and type 'localhost:3000'.
+5- Your are in!
 
 
 ## Project Status
