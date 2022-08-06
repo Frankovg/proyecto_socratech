@@ -37,10 +37,10 @@
 
 
 ## Screenshots
-![Example screenshot](./public/screenshots/screenshot1.png)
-![Example screenshot](./public/screenshots/screenshot2.png)
-![Example screenshot](./public/screenshots/screenshot4.png)
-![Example screenshot](./public/screenshots/screenshot5.png)
+![Example screenshot](./public/screenshots/screenshot1.png)<br/>
+![Example screenshot](./public/screenshots/screenshot2.png)<br/>
+![Example screenshot](./public/screenshots/screenshot4.png)<br/>
+![Example screenshot](./public/screenshots/screenshot5.png)<br/>
 ![Example screenshot](./public/screenshots/screenshot3.png)
 
 
