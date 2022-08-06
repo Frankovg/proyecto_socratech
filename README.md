@@ -52,6 +52,12 @@
 
 
 ## Setup
+1- Create the database. You will find it at "./public/database/digiArt.sql".
+   The relational diagram should be like:
+![Example screenshot](./public/database/relational_diagram.png)
+
+
+
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
 Proceed to describe how to install / setup one's local environment / get started with the project.
