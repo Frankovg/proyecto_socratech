@@ -73,4 +73,4 @@ The relational diagram should be like:
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by [Franco Amoroso](https://www.linkedin.com/in/francoamoroso/) - feel free to contact me!
