@@ -13,21 +13,19 @@
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
+* [License](#license)
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+- The app is about digital art where the user is able to login, upload pictures, edit and delete them. 
+- The information is connected to the database.
+- Sometimes the app does not have too much sense because that is not the point. The objective was to make an app which allows to manipulate a database and, of course, without bugs.
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Front-end: HTML5 - SASS - Bootstrap - JavaScript
+- Back-end: Node.js - Express [other libraries: mysql | multer | bcrypt | nodemon]
+- Database: MySQL
 
 
 ## Features
