@@ -59,8 +59,11 @@ The relational diagram should be like:
 ![Example screenshot](./public/database/relational_diagram.png)
 <br/>
 2- Run 'npm instal' in your terminal. It will install all the dependencies from the package.json.
+<br/>
 3- Lunch the server with nodemon writing 'npm start' in the terminal.
+<br/>
 4- Go to your browser and type 'localhost:3000'.
+<br/>
 5- Your are in!
 
 
