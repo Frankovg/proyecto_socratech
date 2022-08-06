@@ -1,5 +1,5 @@
 # digiArt
-> This is my personal full stack project that I made after 8 weeks in the bootcamp. It was made just by myself and it tooks 3 days to finished it. The project is a kind of exam for the students to probe the knowledge level in the middle of the bootcamp.
+> This is my personal full stack project that I made after 8 weeks in the bootcamp. It was made just by myself and it tooks 3 days to finished it. The project is a kind of exam which the students can probe the knowledge level in the middle of the bootcamp.
 > Video demo in YouTube [_here_](https://youtu.be/x851u6-utEU).
 
 ## Table of Contents
