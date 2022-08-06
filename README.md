@@ -37,8 +37,11 @@
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+![Example screenshot](./public/screenshots/screenshot1.png)
+![Example screenshot](./public/screenshots/screenshot2.png)
+![Example screenshot](./public/screenshots/screenshot3.png)
+![Example screenshot](./public/screenshots/screenshot4.png)
+![Example screenshot](./public/screenshots/screenshot5.png)
 
 
 ## Setup
