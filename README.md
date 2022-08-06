@@ -24,7 +24,7 @@
 
 ## Technologies Used
 - Front-end: HTML5 - SASS - Bootstrap - JavaScript
-- Back-end: Node.js - Express [other libraries: mysql | multer | bcrypt | nodemon]
+- Back-end: Node.js - Express [  other libraries:  mysql  |  multer  |  bcrypt  |  nodemon  ]
 - Database: MySQL
 
 
