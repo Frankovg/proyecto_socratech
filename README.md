@@ -53,8 +53,11 @@
 
 ## Setup
 1- Create the database. You will find it at "./public/database/digiArt.sql".
+<br/>
    The relational diagram should be like:
+   <br/>
 ![Example screenshot](./public/database/relational_diagram.png)
+<br/>
 
 
 
