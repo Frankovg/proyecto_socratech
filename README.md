@@ -9,7 +9,6 @@
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 * [License](#license)
@@ -67,27 +66,10 @@ The relational diagram should be like:
 5- Your are in!
 
 
-## Project Status
-The project is done for the purpose for which it was made. But it can be improved more. Maybe I will return to work on it in the future.
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- This project was inspired by [Deviant Art](https://www.deviantart.com/), [Art Station](https://www.artstation.com/?sort_by=community), [Concept Art World](https://conceptartworld.com/) and [CG Society](https://cgsociety.org/).
+- This project was based on a project for a bootcamp by [Socratech](https://socratech.es/).
+- Many thanks to the professors Carlos Yañez and Miriam Segura.
 
 
 ## Contact
