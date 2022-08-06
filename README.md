@@ -29,10 +29,11 @@
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Encrypted passwords.
+- Full responsive to many screen sizes.
+- Functional email form using Formspree API.
+- Some unique icons and logotipe.
+- Default profile and background picture.
 
 
 ## Screenshots
